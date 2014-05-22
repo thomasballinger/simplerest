@@ -5,8 +5,8 @@ import socket
 
 server = socket.socket()
 server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-server.listen()
 server.bind(('', 7000))
+server.listen(5)
 
 while True:
     s, (ip, port) = server.accept()
